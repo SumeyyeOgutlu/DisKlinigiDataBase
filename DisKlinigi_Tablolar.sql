@@ -8,96 +8,110 @@ CREATE TABLE "public"."Kisi" (
     "Sifre" CHARACTER VARYING(8) NOT NULL,
     "Telefon" CHARACTER VARYING(11),
     "AktifMi" BOOLEAN DEFAULT TRUE,
+    
     CONSTRAINT "pk_Kisi" PRIMARY KEY ("KisiId"),
     CONSTRAINT "unique_Kisi_TCNo" UNIQUE ("TCNo"),
     CONSTRAINT "unique_Kisi_Telefon" UNIQUE ("Telefon")
 );
 
--- 6. Disler Tablosu
+-- 2. Disler Tablosu
 CREATE TABLE "public"."Disler" (
     "DisId" INTEGER NOT NULL,
     "DisAdi" CHARACTER VARYING(50),
     "CeneKonumu" CHARACTER VARYING(10),
     "BolgeNo" INTEGER,
+    
     CONSTRAINT "pk_Disler" PRIMARY KEY ("DisId")
 );
 
--- 7. Tedaviler tablosu
+-- 3. Tedaviler tablosu
 CREATE TABLE "public"."Tedaviler" (
     "TedaviId" SERIAL NOT NULL,
     "IslemAdi" CHARACTER VARYING(50) NOT NULL,
     "TahminiSure" INTEGER NOT NULL,
     "Ucret" INTEGER NOT NULL,
     "AktifMi" BOOLEAN DEFAULT TRUE,
+    
     CONSTRAINT "pk_Tedaviler" PRIMARY KEY ("TedaviId")
 );
 
--- 8. RandevuDurum tablosu
+-- 4. RandevuDurum tablosu
 CREATE TABLE "public"."RandevuDurum" (
     "DurumId" SERIAL NOT NULL,
     "DurumAdi" CHARACTER VARYING(30) NOT NULL,
+    
     CONSTRAINT "pk_RandevuDurum" PRIMARY KEY ("DurumId")
 );
 
--- 9. Vardiyalar tablosu
+-- 5. Vardiyalar tablosu
 CREATE TABLE "public"."Vardiyalar" (
     "VardiyaId" SERIAL NOT NULL,
     "VardiyaAdi" CHARACTER VARYING(50),
     "BaslangicSaati" TIME WITHOUT TIME ZONE,
     "BitisSaati" TIME WITHOUT TIME ZONE,
+    
     CONSTRAINT "pk_Vardiyalar" PRIMARY KEY ("VardiyaId")
 );
 
--- 10. Ilac tablosu
+-- 6. Ilac tablosu
 CREATE TABLE "public"."Ilac" (
     "IlacId" SERIAL NOT NULL,
     "IlacAdi" CHARACTER VARYING(100) NOT NULL,
     "BarkodNo" CHARACTER VARYING(10) NOT NULL,
+    
     CONSTRAINT "pkey_Ilac" PRIMARY KEY ("IlacId"),
     CONSTRAINT "unique_Ilac_BarkodNo" UNIQUE ("BarkodNo")
 );
 
--- 2. Doktor tablosu
+-- 7. Doktor tablosu
 CREATE TABLE "public"."Doktor" (
     "KisiId" INTEGER NOT NULL,
     "DiplomaNo" CHARACTER VARYING(20),
     "UzmanlikAlani" CHARACTER VARYING(50),
+    
     CONSTRAINT "pk_Doktor" PRIMARY KEY ("KisiId"),
     CONSTRAINT "unique_Doktor_DiplomaNo" UNIQUE ("DiplomaNo"),
+    
     CONSTRAINT "fk_Doktor_Kisi" FOREIGN KEY ("KisiId") REFERENCES "public"."Kisi" ("KisiId") 
     ON DELETE CASCADE 
     ON UPDATE CASCADE
 );
 
--- 3. Asistan tablosu
+-- 8. Asistan tablosu
 CREATE TABLE "public"."Asistan" (
     "KisiId" INTEGER NOT NULL,
     "Gorev" CHARACTER VARYING(50),
     "SertifikaNo" CHARACTER VARYING(5),
+    
     CONSTRAINT "pk_Asistan" PRIMARY KEY ("KisiId"),
+    
     CONSTRAINT "fk_Asistan_Kisi" FOREIGN KEY ("KisiId") REFERENCES "public"."Kisi" ("KisiId") 
     ON DELETE CASCADE 
     ON UPDATE CASCADE
 );
 
--- 4. Hasta Tablosu
+-- 9. Hasta Tablosu
 CREATE TABLE "public"."Hasta" (
     "KisiId" INTEGER NOT NULL,
     "DogumTarihi" DATE,
     "KanGrubu" CHARACTER VARYING(10),
     "Cinsiyet" CHARACTER(1),
     "KronikHastalik" TEXT,
+    
     CONSTRAINT "pk_Hasta" PRIMARY KEY ("KisiId"),
+    
     CONSTRAINT "fk_Hasta_Kisi" FOREIGN KEY ("KisiId") REFERENCES "public"."Kisi" ("KisiId") 
     ON DELETE CASCADE 
     ON UPDATE CASCADE    
 );
 
--- 5. Yonetici Tablosu
+-- 10. Yonetici Tablosu
 CREATE TABLE "public"."Yonetici" (
     "KisiId" INTEGER NOT NULL,
     "YetkiSeviyesi" INTEGER DEFAULT 1,
+    
     CONSTRAINT "pk_Yonetici" PRIMARY KEY ("KisiId"),
+    
     CONSTRAINT "fk_Yonetici_Kisi" FOREIGN KEY ("KisiId") REFERENCES "public"."Kisi" ("KisiId") 
     ON DELETE CASCADE 
     ON UPDATE CASCADE
@@ -233,18 +247,17 @@ CREATE TABLE "public"."ReceteIlac" (
 -- 18. SistemLogları tablosu 
 CREATE TABLE "public"."SistemLoglari" (
     "LogId" SERIAL NOT NULL,
-    "KullaniciId" INTEGER, -- FK (Set Null olacak)
+    "KullaniciId" INTEGER, 
     "IslemTarihi" TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     "EtkilenenTablo" CHARACTER VARYING(50),
-    "IslemTuru" CHARACTER VARYING(20), -- INSERT, UPDATE, DELETE
+    "IslemTuru" CHARACTER VARYING(20), 
     "EskiDeger" TEXT,
     "YeniDeger" TEXT,
     "Aciklama" TEXT,
     
     CONSTRAINT "pk_SistemLoglari" PRIMARY KEY ("LogId"),
 
-    -- KISI TABLOSU BAGLANTISI (Önemli: Set Null)
     CONSTRAINT "fk_Log_Kisi" FOREIGN KEY ("KullaniciId") REFERENCES "public"."Kisi" ("KisiId") 
-    ON DELETE SET NULL -- Kişi silinirse log silinmesin, ID boşalsın.
+    ON DELETE SET NULL 
     ON UPDATE CASCADE
 );
