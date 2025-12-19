@@ -15,7 +15,7 @@ namespace DisKlinikUygulama
     {
         NpgsqlConnection baglanti = new NpgsqlConnection("Host=localhost;Username=postgres;Password=123Sum.;Database=DisKlinigi");
 
-        // 2. GLOBAL DEĞİŞKEN (Hangi hastayı seçtiğimizi burada tutacağız)
+        
         int SecilenRandevuId = 0;
         public Doktor()
         {
@@ -24,24 +24,24 @@ namespace DisKlinikUygulama
 
         private void Doktor_Load(object sender, EventArgs e)
         {
-            RandevuListesiGetir(); // Listeyi doldur
-            TedaviListesiGetir();  // ComboBox'ı doldur (Dolgu, Kanal vs.)
+            RandevuListesiGetir(); 
+            TedaviListesiGetir();  
             IlacListesiGetir();
 
-            // Başlangıçta alt kısmı kilitleyelim (Hasta seçmeden işlem yapılmasın)
+            
             textBox1.Enabled = false;
             comboBox1.Enabled = false;
             textBox2.Enabled = false;
             button2.Enabled = false;
         }
 
-        // --- FONKSİYON 1: RANDEVU LİSTESİNİ GETİR ---
+        
         void RandevuListesiGetir()
         {
             try
             {
                 baglanti.Open();
-                // SQL'deki fonksiyonumuzu çağırıyoruz (Doktor ID'sine göre)
+                
                 NpgsqlCommand komut = new NpgsqlCommand("SELECT * FROM \"fn_DoktorRandevulariGetir\"(@p1)", baglanti);
                 komut.Parameters.AddWithValue("@p1", Form1.GirenKullaniciId);
 
@@ -50,10 +50,10 @@ namespace DisKlinikUygulama
                 da.Fill(dt);
                 dataGridView1.DataSource = dt;
 
-                // Tablo makyajı
+                
                 if (dataGridView1.Columns.Count > 0)
                 {
-                    dataGridView1.Columns["RandevuId"].Visible = false; // ID gizli kalsın
+                    dataGridView1.Columns["RandevuId"].Visible = false; 
                     dataGridView1.Columns["Saat"].HeaderText = "Saat";
                     dataGridView1.Columns["HastaAd"].HeaderText = "Adı";
                     dataGridView1.Columns["HastaSoyad"].HeaderText = "Soyadı";
@@ -69,21 +69,21 @@ namespace DisKlinikUygulama
             }
         }
 
-        // --- FONKSİYON 2: TEDAVİLERİ COMBOBOX'A DOLDUR ---
+        
         void TedaviListesiGetir()
         {
             try
             {
                 baglanti.Open();
-                // Sadece Aktif olan tedavileri getir
+                
                 NpgsqlCommand komut = new NpgsqlCommand("SELECT \"TedaviId\", \"IslemAdi\" FROM \"Tedaviler\" WHERE \"AktifMi\" = TRUE", baglanti);
                 NpgsqlDataAdapter da = new NpgsqlDataAdapter(komut);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
-                // ComboBox Ayarları
-                comboBox1.DisplayMember = "IslemAdi"; // Ekranda görünen isim (Örn: Dolgu)
-                comboBox1.ValueMember = "TedaviId";   // Arka plandaki ID (Örn: 5)
+                
+                comboBox1.DisplayMember = "IslemAdi"; 
+                comboBox1.ValueMember = "TedaviId";   
                 comboBox1.DataSource = dt;
 
                 baglanti.Close();
@@ -102,16 +102,16 @@ namespace DisKlinikUygulama
             {
                 if (baglanti.State == ConnectionState.Closed) baglanti.Open();
                 NpgsqlCommand komut = new NpgsqlCommand("SELECT \"IlacId\", \"IlacAdi\" FROM \"public\".\"Ilac\" ORDER BY \"IlacAdi\"", baglanti);
-                // NpgsqlCommand komut = new NpgsqlCommand("SELECT * FROM \"fn_IlaclariGetir\"()", baglanti);
+                
                 NpgsqlDataAdapter da = new NpgsqlDataAdapter(komut);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
-                // cmbIlaclar senin formuna eklediğin yeni ComboBox'ın adı olmalı
+               
                 comboBox2.DisplayMember = "IlacAdi";
                 comboBox2.ValueMember = "IlacId";
                 comboBox2.DataSource = dt;
-                comboBox2.SelectedIndex = -1; // Başlangıçta boş gelsin
+                comboBox2.SelectedIndex = -1; 
 
                 baglanti.Close();
             }
@@ -126,13 +126,13 @@ namespace DisKlinikUygulama
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                // Seçili satırdaki Gizli ID'yi al
+                
                 SecilenRandevuId = int.Parse(dataGridView1.SelectedRows[0].Cells["RandevuId"].Value.ToString());
                 string hastaAdi = dataGridView1.SelectedRows[0].Cells["HastaAd"].Value.ToString();
 
                 MessageBox.Show(hastaAdi + " isimli hasta seçildi. İşlem girebilirsiniz.", "Hasta Seçildi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Kutucukları Aktif Et
+                
                 textBox1.Enabled = true;
                 comboBox1.Enabled = true;
                 textBox2.Enabled = true;
@@ -146,7 +146,7 @@ namespace DisKlinikUygulama
 
         private void button2_Click(object sender, EventArgs e)//kaydet butonu
         {
-            // Önce güvenlik: Hasta seçilmiş mi?
+            
             if (SecilenRandevuId == 0)
             {
                 MessageBox.Show("Lütfen önce yukarıdan bir hasta seçiniz!");
@@ -155,35 +155,33 @@ namespace DisKlinikUygulama
 
             try
             {
-                // Bağlantı açık değilse açalım
+                
                 if (baglanti.State == ConnectionState.Closed)
                     baglanti.Open();
 
-                // SQL Prosedürünü Çağırıyoruz: sp_IslemEkle
-                // Bu prosedürü daha önce Valentina'da oluşturmuştuk
+                
                 NpgsqlCommand komut = new NpgsqlCommand("CALL \"sp_IslemEkle\"(@p1, @p2, @p3, @p4)", baglanti);
 
-                // Parametre 1: Randevu ID (Seç butonundan geldi)
+                
                 komut.Parameters.AddWithValue("@p1", SecilenRandevuId);
 
-                // Parametre 2: Diş Numarası (textBox1'den geliyor)
+                
                 int disNo = 0;
-                int.TryParse(textBox1.Text, out disNo); // Sayı girilmezse 0 kabul et, hata verme
+                int.TryParse(textBox1.Text, out disNo); 
                 komut.Parameters.AddWithValue("@p2", disNo);
 
-                // Parametre 3: Tedavi ID (comboBox1'den geliyor)
-                // SelectedValue, arka plandaki ID'yi verir
+                
                 komut.Parameters.AddWithValue("@p3", (int)comboBox1.SelectedValue);
 
-                // Parametre 4: Doktor Notu (textBox2'den geliyor)
+                
                 komut.Parameters.AddWithValue("@p4", textBox2.Text);
 
-                // Komutu Çalıştır (Veritabanına Kaydet)
+               
                 komut.ExecuteNonQuery();
 
                 MessageBox.Show("İşlem başarıyla kaydedildi!", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Temizlik yapalım ki yeni işleme hazır olsun
+                
                 textBox1.Clear(); // Diş nosunu temizle
                 textBox2.Clear(); // Notu temizle
 
@@ -199,7 +197,7 @@ namespace DisKlinikUygulama
 
         private void button3_Click(object sender, EventArgs e)//ilaç ekle butonu
         {
-            // 1. Kontroller
+            
             if (SecilenRandevuId == 0)
             {
                 MessageBox.Show("Lütfen önce listeden bir hasta seçiniz.");
@@ -215,7 +213,7 @@ namespace DisKlinikUygulama
             {
                 baglanti.Open();
 
-                // SQL Prosedürünü Çağır: sp_ReceteIlacEkle
+                
                 NpgsqlCommand komut = new NpgsqlCommand("CALL \"sp_ReceteIlacEkle\"(@p1, @p2, @p3, @p4)", baglanti);
 
                 komut.Parameters.AddWithValue("@p1", SecilenRandevuId); // Randevu ID
@@ -226,7 +224,7 @@ namespace DisKlinikUygulama
                 int.TryParse(textBox3.Text, out adet);
                 komut.Parameters.AddWithValue("@p3", adet);
 
-                // Kullanım şekli (Örn: "Tok karna")
+                // Kullanım şekli
                 komut.Parameters.AddWithValue("@p4", textBox4.Text);
 
                 komut.ExecuteNonQuery();
@@ -234,7 +232,7 @@ namespace DisKlinikUygulama
 
                 MessageBox.Show("İlaç reçeteye eklendi.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Temizlik
+               
                 textBox3.Clear();
                 textBox4.Clear();
             }

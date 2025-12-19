@@ -6,7 +6,6 @@ namespace DisKlinikUygulama
     public partial class Form1 : Form
     {
 
-        // 2. BAÐLANTI VE DEÐÝÞKENLERÝ BURAYA (CLASS ÝÇÝNE) YAZIYORUZ
         NpgsqlConnection baglanti = new NpgsqlConnection("Host=localhost;Username=postgres;Password=123Sum.;Database=DisKlinigi");
 
         public static int GirenKullaniciId;
@@ -31,15 +30,10 @@ namespace DisKlinikUygulama
                 // SQL Fonksiyonunu çaðýrýyoruz
                 NpgsqlCommand komut = new NpgsqlCommand("SELECT * FROM \"fn_GirisYap\"(@p1, @p2)", baglanti);
 
-                // Parametreleri (TC ve Þifre) ekliyoruz
-                //  komut.Parameters.AddWithValue("@p2", textBox2.Text.Trim());
-                //  komut.Parameters.AddWithValue("@p1", textBox1.Text.Trim());
-
-                // DÜZELTÝLEN KISIM BURASI:
-                // @p1 --> Ýlk parametre TC OLMALI (Senin tasarýmda textBox2)
+                
                 komut.Parameters.AddWithValue("@p1", textBox2.Text.Trim());
 
-                // @p2 --> Ýkinci parametre ÞÝFRE OLMALI (Senin tasarýmda textBox1)
+                
                 komut.Parameters.AddWithValue("@p2", textBox1.Text.Trim());
 
 

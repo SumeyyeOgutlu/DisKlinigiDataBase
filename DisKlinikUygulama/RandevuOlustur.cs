@@ -56,11 +56,10 @@ namespace DisKlinikUygulama
             catch { }
         }
 
-        // --- KRİTİK NOKTA: LİSTEYİ YENİLEME FONKSİYONU ---
-        // Bu fonksiyon her işlemden sonra çalışacak ve Grid'i tazeleyecek.
+       
         void RandevulariListele()
         {
-            // Eğer hasta seçili değilse listeyi boşalt ve çık
+            
             if (comboBox1.SelectedValue == null)
             {
                 dataGridView1.DataSource = null;
@@ -73,7 +72,7 @@ namespace DisKlinikUygulama
 
                 int hastaId = (int)comboBox1.SelectedValue;
 
-                // Hastanın randevularını çeken SQL
+                
                 NpgsqlCommand komut = new NpgsqlCommand("SELECT * FROM \"fn_HastaRandevulariGetir\"(@p1)", baglanti);
                 komut.Parameters.AddWithValue("@p1", hastaId);
 
@@ -81,10 +80,10 @@ namespace DisKlinikUygulama
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
-                // Grid'e bas
+                
                 dataGridView1.DataSource = dt;
 
-                // ID sütununu gizle (Göz kirliliği yapmasın)
+                
                 if (dataGridView1.Columns.Contains("RandevuId"))
                     dataGridView1.Columns["RandevuId"].Visible = false;
 
@@ -151,7 +150,7 @@ namespace DisKlinikUygulama
                 baglanti.Close();
 
                 MessageBox.Show("Randevu Eklendi.");
-                RandevulariListele(); // LİSTEYİ YENİLE (Hemen görünmesi için)
+                RandevulariListele(); 
             }
             catch (Exception ex)
             {
@@ -162,7 +161,7 @@ namespace DisKlinikUygulama
 
         private void button2_Click(object sender, EventArgs e)//sil butonu
         {
-            // Grid'de seçili satır yoksa uyarı ver
+            
             if (dataGridView1.CurrentRow == null)
             {
                 MessageBox.Show("Lütfen silinecek randevuyu listeden seçiniz.");
@@ -183,7 +182,7 @@ namespace DisKlinikUygulama
                     baglanti.Close();
 
                     MessageBox.Show("Randevu Silindi.");
-                    RandevulariListele(); // LİSTEYİ YENİLE (Silinen gitsin)
+                    RandevulariListele(); 
                 }
                 catch (Exception ex)
                 {
@@ -203,22 +202,22 @@ namespace DisKlinikUygulama
 
             try
             {
-                // Seçili satırın ID'sini al
+                
                 int guncellenecekId = int.Parse(dataGridView1.CurrentRow.Cells["RandevuId"].Value.ToString());
 
                 baglanti.Open();
                 NpgsqlCommand komut = new NpgsqlCommand("CALL \"sp_RandevuGuncelle\"(@p1, @p2, @p3, @p4)", baglanti);
 
                 komut.Parameters.AddWithValue("@p1", guncellenecekId);
-                komut.Parameters.AddWithValue("@p2", (int)comboBox2.SelectedValue); // Yeni seçilen doktor
-                komut.Parameters.Add("@p3", NpgsqlTypes.NpgsqlDbType.Date).Value = dateTimePicker1.Value; // Yeni tarih
-                komut.Parameters.AddWithValue("@p4", textBox1.Text); // Yeni saat
+                komut.Parameters.AddWithValue("@p2", (int)comboBox2.SelectedValue); 
+                komut.Parameters.Add("@p3", NpgsqlTypes.NpgsqlDbType.Date).Value = dateTimePicker1.Value; 
+                komut.Parameters.AddWithValue("@p4", textBox1.Text); 
 
                 komut.ExecuteNonQuery();
                 baglanti.Close();
 
                 MessageBox.Show("Randevu Güncellendi.");
-                RandevulariListele(); // LİSTEYİ YENİLE (Değişiklik görünsün)
+                RandevulariListele(); 
             }
             catch (Exception ex)
             {
@@ -231,7 +230,7 @@ namespace DisKlinikUygulama
         {
             if (e.RowIndex >= 0)
             {
-                // Tıklanan satırdaki Tarih ve Saati kutulara geri dolduruyoruz
+                
                 try
                 {
                     dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells["Tarih"].Value);

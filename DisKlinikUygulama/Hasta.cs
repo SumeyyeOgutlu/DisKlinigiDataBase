@@ -13,7 +13,7 @@ namespace DisKlinikUygulama
 {
     public partial class Hasta : Form
     {
-        // Veritabanı bağlantı cümlen
+        // Veritabanı bağlantı
         NpgsqlConnection baglanti = new NpgsqlConnection("Host=localhost;Username=postgres;Password=123Sum.;Database=DisKlinigi");
 
         public string gelenTC = "";
@@ -23,7 +23,7 @@ namespace DisKlinikUygulama
             
         }
 
-        // 2. DOLU CONSTRUCTOR (Giriş yaparken veri taşımak için)
+        
         public Hasta(string tc)
         {
             InitializeComponent();
@@ -32,14 +32,14 @@ namespace DisKlinikUygulama
 
         private void Hasta_Load(object sender, EventArgs e)
         {
-            // Eğer TC boşsa (Tasarım ekranı vb.) işlem yapma
+            // Eğer TC boşsa  işlem yapma
             if (string.IsNullOrEmpty(gelenTC)) return;
 
-            // Form Düzeni
+            
             label4.Text = "Randevularım";
             label5.Text = "Ödemelerim";
 
-            // Verileri Getir
+            
             ProfilBilgileriniGetir();
             RandevulariGetir();
             OdemeleriGetir();
@@ -51,7 +51,7 @@ namespace DisKlinikUygulama
             {
                 baglanti.Open();
 
-                // SQL Fonksiyonunu Çağırıyoruz
+                
                 NpgsqlCommand komut = new NpgsqlCommand("SELECT * FROM \"fn_HastaProfilGetir\"(@p1)", baglanti);
                 komut.Parameters.AddWithValue("@p1", gelenTC);
 
@@ -77,7 +77,7 @@ namespace DisKlinikUygulama
             {
                 if (baglanti.State == ConnectionState.Closed) baglanti.Open();
 
-                // SQL Fonksiyonunu Çağırıyoruz
+                
                 NpgsqlCommand komut = new NpgsqlCommand("SELECT * FROM \"fn_HastaRandevulari\"(@p1)", baglanti);
                 komut.Parameters.AddWithValue("@p1", gelenTC);
 
@@ -87,7 +87,7 @@ namespace DisKlinikUygulama
 
                 dataGridView1.DataSource = dt;
 
-                // Sütun Başlıkları
+                
                 if (dataGridView1.Columns.Contains("Doktor"))
                     dataGridView1.Columns["Doktor"].HeaderText = "Doktor Adı";
 
@@ -102,14 +102,14 @@ namespace DisKlinikUygulama
             }
         }
 
-        // --- SAĞ ALTTAKİ GRİ KUTU (Ödemeler) ---
+        
         void OdemeleriGetir()
         {
             try
             {
                 if (baglanti.State == ConnectionState.Closed) baglanti.Open();
 
-                // SQL Fonksiyonunu Çağırıyoruz
+                
                 NpgsqlCommand komut = new NpgsqlCommand("SELECT * FROM \"fn_HastaOdemeleri\"(@p1)", baglanti);
                 komut.Parameters.AddWithValue("@p1", gelenTC);
 
@@ -119,7 +119,7 @@ namespace DisKlinikUygulama
 
                 dataGridView2.DataSource = dt;
 
-                // Para birimi formatı (₺)
+                
                 if (dataGridView2.Columns.Contains("Tutar"))
                     dataGridView2.Columns["Tutar"].DefaultCellStyle.Format = "C2";
 
