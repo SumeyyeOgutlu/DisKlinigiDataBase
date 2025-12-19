@@ -1,0 +1,324 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|c:\\users\\s\u00FCmeyye\\source\\repos\\disklinikuygulama\\hasta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|solutionrelative:hasta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\asistan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|solutionrelative:asistan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|c:\\users\\s\u00FCmeyye\\source\\repos\\disklinikuygulama\\doktor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|solutionrelative:doktor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\yonetici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|solutionrelative:yonetici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|c:\\users\\s\u00FCmeyye\\source\\repos\\disklinikuygulama\\odemeler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|solutionrelative:odemeler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\randevuolustur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|solutionrelative:randevuolustur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|c:\\users\\s\u00FCmeyye\\source\\repos\\disklinikuygulama\\randevuolustur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|solutionrelative:randevuolustur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|c:\\users\\s\u00FCmeyye\\source\\repos\\disklinikuygulama\\asistan2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|solutionrelative:asistan2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\asistan2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|solutionrelative:asistan2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|c:\\users\\s\u00FCmeyye\\source\\repos\\disklinikuygulama\\asistan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|solutionrelative:asistan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|c:\\users\\s\u00FCmeyye\\source\\repos\\disklinikuygulama\\asistansecenek.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|solutionrelative:asistansecenek.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|c:\\users\\s\u00FCmeyye\\source\\repos\\disklinikuygulama\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|c:\\users\\s\u00FCmeyye\\source\\repos\\disklinikuygulama\\yonetici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|solutionrelative:yonetici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\odemeler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|solutionrelative:odemeler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\hasta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|solutionrelative:hasta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\doktor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|solutionrelative:doktor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\asistansecenek.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|solutionrelative:asistansecenek.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|c:\\users\\s\u00FCmeyye\\source\\repos\\disklinikuygulama\\resource1.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{22D0A6B6-3E37-4936-A941-4A0C76E65E0F}|DisKlinikUygulama.csproj|solutionrelative:resource1.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Hasta.cs",
+              "DocumentMoniker": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Hasta.cs",
+              "RelativeDocumentMoniker": "Hasta.cs",
+              "ToolTip": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Hasta.cs",
+              "RelativeToolTip": "Hasta.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAwHUAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T11:51:27.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Hasta.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Hasta.cs",
+              "RelativeDocumentMoniker": "Hasta.cs",
+              "ToolTip": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Hasta.cs [Design]",
+              "RelativeToolTip": "Hasta.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T11:48:54.202Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Yonetici.cs",
+              "DocumentMoniker": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Yonetici.cs",
+              "RelativeDocumentMoniker": "Yonetici.cs",
+              "ToolTip": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Yonetici.cs",
+              "RelativeToolTip": "Yonetici.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAswEwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T05:30:37.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Odemeler.cs",
+              "DocumentMoniker": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Odemeler.cs",
+              "RelativeDocumentMoniker": "Odemeler.cs",
+              "ToolTip": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Odemeler.cs",
+              "RelativeToolTip": "Odemeler.cs",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAAwJQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T15:41:15.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Odemeler.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Odemeler.cs",
+              "RelativeDocumentMoniker": "Odemeler.cs",
+              "ToolTip": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Odemeler.cs [Design]",
+              "RelativeToolTip": "Odemeler.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T19:30:08.887Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RandevuOlustur.cs",
+              "DocumentMoniker": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\RandevuOlustur.cs",
+              "RelativeDocumentMoniker": "RandevuOlustur.cs",
+              "ToolTip": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\RandevuOlustur.cs",
+              "RelativeToolTip": "RandevuOlustur.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAADwv0oAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T17:54:21.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RandevuOlustur.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\RandevuOlustur.cs",
+              "RelativeDocumentMoniker": "RandevuOlustur.cs",
+              "ToolTip": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\RandevuOlustur.cs [Design]",
+              "RelativeToolTip": "RandevuOlustur.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T17:39:09.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Asistan2.cs",
+              "DocumentMoniker": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Asistan2.cs",
+              "RelativeDocumentMoniker": "Asistan2.cs",
+              "ToolTip": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Asistan2.cs",
+              "RelativeToolTip": "Asistan2.cs",
+              "ViewState": "AgIAAL0AAAAAAAAAAAAowMQAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T13:17:16.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Asistan2.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Asistan2.cs",
+              "RelativeDocumentMoniker": "Asistan2.cs",
+              "ToolTip": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Asistan2.cs [Design]",
+              "RelativeToolTip": "Asistan2.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T13:05:17.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AsistanSecenek.cs",
+              "DocumentMoniker": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\AsistanSecenek.cs",
+              "RelativeDocumentMoniker": "AsistanSecenek.cs",
+              "ToolTip": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\AsistanSecenek.cs",
+              "RelativeToolTip": "AsistanSecenek.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T12:27:11.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AsistanSecenek.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\AsistanSecenek.cs",
+              "RelativeDocumentMoniker": "AsistanSecenek.cs",
+              "ToolTip": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\AsistanSecenek.cs [Design]",
+              "RelativeToolTip": "AsistanSecenek.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T12:24:23.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Asistan.cs",
+              "DocumentMoniker": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Asistan.cs",
+              "RelativeDocumentMoniker": "Asistan.cs",
+              "ToolTip": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Asistan.cs",
+              "RelativeToolTip": "Asistan.cs",
+              "ViewState": "AgIAALAAAAAAAAAAAAAswGEAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T09:58:32.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Doktor.cs",
+              "DocumentMoniker": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Doktor.cs",
+              "RelativeDocumentMoniker": "Doktor.cs",
+              "ToolTip": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Doktor.cs",
+              "RelativeToolTip": "Doktor.cs",
+              "ViewState": "AgIAAN4AAAAAAAAAAAAAwPAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T15:50:02.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwEcAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T12:41:12.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Resource1.resx",
+              "DocumentMoniker": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Resource1.resx",
+              "RelativeDocumentMoniker": "Resource1.resx",
+              "ToolTip": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Resource1.resx",
+              "RelativeToolTip": "Resource1.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-12-08T11:06:56.516Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T09:48:34.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Asistan.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Asistan.cs",
+              "RelativeDocumentMoniker": "Asistan.cs",
+              "ToolTip": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Asistan.cs [Design]",
+              "RelativeToolTip": "Asistan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T12:56:10.191Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Doktor.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Doktor.cs",
+              "RelativeDocumentMoniker": "Doktor.cs",
+              "ToolTip": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Doktor.cs [Design]",
+              "RelativeToolTip": "Doktor.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T12:55:12.899Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Yonetici.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Yonetici.cs",
+              "RelativeDocumentMoniker": "Yonetici.cs",
+              "ToolTip": "C:\\Users\\S\u00DCMEYYE\\source\\repos\\DisKlinikUygulama\\Yonetici.cs [Design]",
+              "RelativeToolTip": "Yonetici.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T12:54:04.102Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
